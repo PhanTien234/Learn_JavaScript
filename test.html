@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function myfunction(){
+            var a = parseInt(document.getElementById("dayInput").value)%7
+            var b;
+            switch (a){
+                case 1:
+                    b = "Sunday";
+                    break;
+                case 2: 
+                    b = "Monday";
+                    break;
+                case 3:
+                    b = "Tuesday";
+                    break;
+                case 4:
+                    b = "Wednesday";
+                    break;
+                case 5:
+                    b = "Thursday";
+                    break;
+                case 6:
+                    b = "Friday";
+                    break;
+                case 0:
+                    b = "Saturday";
+                    break;
+                default:
+                    b = "unknown";
+                    break;
+            }
+            document.getElementById("output").innerHTML = b;
+        }
+    </script>
+    <div class = "container">
+        <label for = ""> input number </label>
+        <input type="text" id = "dayInput">
+        <button onclick="myfunction()"> find </button>
+        <p id = "output"></p>
+    </div>
+</body>
+</html>
